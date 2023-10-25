@@ -1,0 +1,12 @@
+import { StyleSheet, Text, View } from "react-native"
+import React from "react"
+
+export default function TabScreen2() {
+	return (
+		<View>
+			<Text>TabScreen2</Text>
+		</View>
+	)
+}
+
+const styles = StyleSheet.create({})
