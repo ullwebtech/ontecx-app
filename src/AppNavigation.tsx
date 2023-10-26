@@ -3,10 +3,7 @@ import { NavigationContainer } from "@react-navigation/native"
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 import { createDrawerNavigator } from "@react-navigation/drawer"
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
-import { HomeIcon } from "react-native-heroicons/outline"
 import HomeScreen from "screens/HomeScreen"
-import TabScreen2 from "screens/TabScreen2"
-
 import { useSelector } from "react-redux"
 import { getAuthStatus } from "redux/reducers/appSlice"
 import WelcomeScreen from "screens/WelcomeScreen"
@@ -15,6 +12,8 @@ import TabBar from "components/navigation/TabBar"
 import { RootScreenParamList } from "types"
 import Appheader from "components/navigation/Appheader"
 import ReadNewsScreen from "screens/ReadNewsScreen"
+import CustomDrawerItems from "components/navigation/DrawerItems"
+import ArticleContentScreen from "screens/ArticleContentScreen"
 
 const Stack = createNativeStackNavigator<RootScreenParamList>()
 const Drawer = createDrawerNavigator<RootScreenParamList>()
@@ -40,7 +39,19 @@ const StackScreen = () => (
 	</Stack.Navigator>
 )
 
-const TabScreen = () => (
+const StackArticleScreens = () => (
+	<Stack.Navigator>
+		<Stack.Screen
+			name="ArticleContent"
+			component={ArticleContentScreen}
+			options={{
+				headerShown: false
+			}}
+		/>
+	</Stack.Navigator>
+)
+
+const TabScreens = () => (
 	<Tab.Navigator tabBar={props => <TabBar {...props} />}>
 		<Tab.Screen
 			name="Dashboard"
@@ -71,10 +82,19 @@ const AppNavigation = () => {
 					screenOptions={{
 						headerLeft: () => null
 					}}
+					drawerContent={props => <CustomDrawerItems {...props} />}
 				>
 					<Drawer.Screen
 						name="Home"
-						component={TabScreen}
+						component={TabScreens}
+						options={{
+							headerTitle: props => <Appheader />
+						}}
+					/>
+
+					<Drawer.Screen
+						name="StackArticleScreens"
+						component={StackArticleScreens}
 						options={{
 							headerTitle: props => <Appheader />
 						}}

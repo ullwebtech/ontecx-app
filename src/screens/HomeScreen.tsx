@@ -9,7 +9,7 @@ import { setAppTitle } from "redux/reducers/appSlice"
 export default function HomeScreen() {
 	const dispatcher = useAppDispatch()
 	React.useEffect(() => {
-		dispatcher(setAppTitle("Home"))
+		dispatcher(setAppTitle({ title: "Home" }))
 	}, [])
 
 	return (

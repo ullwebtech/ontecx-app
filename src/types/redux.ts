@@ -21,6 +21,8 @@ export interface RequestState<ResData = undefined> {
 export interface AppSliceState {
 	isLoggedIn: boolean
 	appTitle?: string
+	showArticleHeader?: boolean
+	articleTitle?: string
 }
 
 export interface AuthSliceState {

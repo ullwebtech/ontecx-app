@@ -1,7 +1,10 @@
-import { StyleSheet, Text, View, TouchableOpacity, FlatList, Touchable } from "react-native"
+import { StyleSheet, Text, View, TouchableOpacity, FlatList } from "react-native"
 import React from "react"
 import { ClockIcon, MusicalNoteIcon } from "react-native-heroicons/outline"
 import { Image } from "expo-image"
+import { useNavigation } from "@react-navigation/native"
+import { useAppDispatch } from "redux/store"
+import { setAppTitle } from "redux/reducers/appSlice"
 
 type ArticleListingProps = {
 	id: number
@@ -72,9 +75,20 @@ type RecommendNewsProps = {
 	showHeader?: boolean
 }
 export default function RecommendNews({ showHeader = true }: RecommendNewsProps) {
+	const navigation = useNavigation()
+	const dispatcher = useAppDispatch()
+
+	const showMore = () => navigation?.navigate("ReadNews")
+
+	const gotoArticleContent = () => {
+		dispatcher(setAppTitle({ articleTitle: "Startup", articleHeader: true }))
+
+		navigation?.navigate("StackArticleScreens")
+	}
+
 	const renderItem = ({ item }: { item: ArticleListingProps }) => {
 		return (
-			<TouchableOpacity activeOpacity={0.5} style={styles.card}>
+			<TouchableOpacity onPress={gotoArticleContent} activeOpacity={0.5} style={styles.card}>
 				{/* image */}
 				<View>
 					<Image source={item?.img} style={styles.cardImg} />
@@ -118,7 +132,7 @@ export default function RecommendNews({ showHeader = true }: RecommendNewsProps)
 			{showHeader && (
 				<View style={styles.header}>
 					<Text style={styles.heading}>Recommend for you</Text>
-					<TouchableOpacity activeOpacity={0.5}>
+					<TouchableOpacity activeOpacity={0.5} onPress={showMore}>
 						<Text style={styles.info}>Show more</Text>
 					</TouchableOpacity>
 				</View>

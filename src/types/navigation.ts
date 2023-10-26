@@ -7,7 +7,8 @@ export type RootScreenParamList = {
 	SignUpScreen?: undefined
 	Dashboard?: undefined
 	Home?: undefined
-
+	StackArticleScreens?: undefined
+	ArticleContent?: undefined
 	ReadNews?: undefined
 }
 

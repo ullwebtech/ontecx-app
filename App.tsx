@@ -48,7 +48,7 @@ export default function App() {
 
 	return (
 		<ReduxProvider store={ReduxStore}>
-			<StatusBar animated={true} backgroundColor={"#fff"} barStyle={"dark-content"} showHideTransition={"slide"} hidden={false} />
+			<StatusBar animated={true} backgroundColor={"#1280E1"} barStyle={"light-content"} showHideTransition={"slide"} hidden={false} />
 
 			<AppNavigation />
 		</ReduxProvider>

@@ -3,20 +3,25 @@ import React from "react"
 import { BottomTabBarProps } from "@react-navigation/bottom-tabs"
 import { Bars4Icon, HomeIcon, MusicalNoteIcon, NewspaperIcon } from "react-native-heroicons/outline"
 import { DrawerActions, useNavigation } from "@react-navigation/native"
+import { useAppDispatch } from "redux/store"
+import { setAppTitle } from "redux/reducers/appSlice"
 
 export default function TabBar({ state, navigation, descriptors }: BottomTabBarProps) {
 	const [activeTab, setActiveTab] = React.useState<"home" | "read-news" | "paid-news" | "categories">("home")
+	const dispatcher = useAppDispatch()
 
 	const toggleDrawer = () => navigation.dispatch(DrawerActions.toggleDrawer())
 
 	/* navigation */
 	const onPressHome = () => {
 		setActiveTab("home")
+		dispatcher(setAppTitle({ title: "Home" }))
 		navigation?.navigate("Dashboard")
 	}
 
 	const onPressReadNews = () => {
 		setActiveTab("read-news")
+		dispatcher(setAppTitle({ title: "Read News" }))
 		navigation?.navigate("ReadNews")
 	}
 	return (
