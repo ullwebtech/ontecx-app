@@ -1,111 +1,57 @@
-import { StyleSheet, Text, View, TouchableOpacity, FlatList } from "react-native"
+import { StyleSheet, Text, View, TouchableOpacity, FlatList, ActivityIndicator } from "react-native"
 import React from "react"
 import { ClockIcon, MusicalNoteIcon } from "react-native-heroicons/outline"
 import { Image } from "expo-image"
 import { useNavigation } from "@react-navigation/native"
 import { useAppDispatch } from "redux/store"
 import { setAppTitle } from "redux/reducers/appSlice"
-
-type ArticleListingProps = {
-	id: number
-	category: string
-	tag: string
-	text: string
-	author: string
-	date: {
-		date: string
-		time: string
-	}
-	img: any
-}
-const articleListing: Array<ArticleListingProps> = [
-	{
-		id: 1,
-		category: "STARTUPS",
-		tag: "latest stories",
-		text: "Nigerian Agric-Tech Startup Releaf secures $4.2M in seed funding, grants",
-		author: "By Barnabas Blessing (Arabella)",
-		date: {
-			date: "Feb 27, 2023",
-			time: "2 mins read"
-		},
-		img: require("assets/images/article-1.png")
-	},
-	{
-		id: 2,
-		category: "TECH DIGEST",
-		tag: "CASE STUDIES",
-		text: "How to become a tech savvy",
-		author: "By Barnabas Blessing (Arabella)",
-		date: {
-			date: "Feb 27, 2023",
-			time: "2 mins read"
-		},
-		img: require("assets/images/article-2.png")
-	},
-
-	{
-		id: 3,
-		category: "INDUSTRIES",
-		tag: "latest stories",
-		text: "Virtual Workspace? What You Need To Know",
-		author: "By Barnabas Blessing (Arabella)",
-		date: {
-			date: "Feb 27, 2023",
-			time: "2 mins read"
-		},
-		img: require("assets/images/article-3.png")
-	},
-
-	{
-		id: 4,
-		category: "TECH DIGEST",
-		tag: "CASE STUDIES",
-		text: "How to become a tech savvy",
-		author: "By Barnabas Blessing (Arabella)",
-		date: {
-			date: "Feb 27, 2023",
-			time: "2 mins read"
-		},
-		img: require("assets/images/article-2.png")
-	}
-]
+import { FetchNewsContentApiHandler, FetchNewsHeadlinesApiHandler, getNewsHeadlines } from "redux/reducers/newsSlice"
+import { useSelector } from "react-redux"
+import { NewsInterface } from "types"
 
 type RecommendNewsProps = {
 	showHeader?: boolean
+	height?: number | string
 }
-export default function RecommendNews({ showHeader = true }: RecommendNewsProps) {
+export default function RecommendNews({ showHeader = true, height = 300 }: RecommendNewsProps) {
 	const navigation = useNavigation()
 	const dispatcher = useAppDispatch()
+	const { isLoading, data } = useSelector(getNewsHeadlines)
 
+	const articles = data?.news ?? []
 	const showMore = () => navigation?.navigate("ReadNews")
 
-	const gotoArticleContent = () => {
-		dispatcher(setAppTitle({ articleTitle: "Startup", articleHeader: true }))
+	const gotoArticleContent = (_slug?: string, _title?: string) => {
+		dispatcher(setAppTitle({ articleTitle: _title, articleHeader: true }))
 
+		dispatcher(FetchNewsContentApiHandler({ id: _slug }))
 		navigation?.navigate("StackArticleScreens")
 	}
 
-	const renderItem = ({ item }: { item: ArticleListingProps }) => {
+	React.useEffect(() => {
+		dispatcher(FetchNewsHeadlinesApiHandler({ id: "ng" }))
+	}, [])
+
+	const renderItem = ({ item }: { item: NewsInterface }) => {
 		return (
-			<TouchableOpacity onPress={gotoArticleContent} activeOpacity={0.5} style={styles.card}>
+			<TouchableOpacity onPress={() => gotoArticleContent(item?.url, item?.language?.toLocaleUpperCase())} activeOpacity={0.5} style={styles.card}>
 				{/* image */}
 				<View>
-					<Image source={item?.img} style={styles.cardImg} />
+					<Image source={{ uri: item?.image, width: 250, height: 250 }} style={styles.cardImg} />
 				</View>
 
 				{/* body */}
 				<View style={styles.cardBody}>
 					{/* header */}
 					<View style={styles.cardHeader}>
-						<Text style={styles.cardCategory}>{item?.category}</Text>
-						<Text style={styles.cardHeaderSeparator} />
-						<Text style={styles.cardTag}>{item?.tag}</Text>
+						<Text style={styles.cardCategory}>{item?.author}</Text>
+						{/* <Text style={styles.cardHeaderSeparator} />
+						<Text style={styles.cardTag}>{item?.tag}</Text> */}
 					</View>
 
 					<View>
-						<Text style={styles.cardBodyText} numberOfLines={2}>
-							{item?.text}
+						<Text style={styles.cardBodyText} numberOfLines={1}>
+							{item?.title}
 						</Text>
 					</View>
 
@@ -113,9 +59,11 @@ export default function RecommendNews({ showHeader = true }: RecommendNewsProps)
 					<View style={styles.footer}>
 						{/* article infor */}
 						<View style={styles.articleInfo}>
-							<Text style={styles.author}>{item?.author}</Text>
+							<Text style={styles.author} numberOfLines={2}>
+								{item?.text}
+							</Text>
 							<Text style={styles.date}>
-								{item?.date.date} <ClockIcon size={16} color={"gray"} /> {item?.date?.time}
+								<ClockIcon size={16} color={"gray"} /> {new Date(item?.publish_date)?.toUTCString()}
 							</Text>
 						</View>
 						<View style={styles.articleIcon}>
@@ -138,14 +86,18 @@ export default function RecommendNews({ showHeader = true }: RecommendNewsProps)
 				</View>
 			)}
 
-			<FlatList
-				ItemSeparatorComponent={() => <View style={styles.separator} />}
-				showsVerticalScrollIndicator={false}
-				data={articleListing}
-				renderItem={renderItem}
-				style={{ height: 300 }}
-				contentContainerStyle={{ paddingBottom: 30 }}
-			/>
+			{isLoading ? (
+				<ActivityIndicator />
+			) : (
+				<FlatList
+					ItemSeparatorComponent={() => <View style={styles.separator} />}
+					showsVerticalScrollIndicator={false}
+					data={articles}
+					renderItem={renderItem}
+					style={{ height: "100%" }}
+					contentContainerStyle={{ paddingBottom: 30 }}
+				/>
+			)}
 		</View>
 	)
 }
@@ -235,7 +187,10 @@ const styles = StyleSheet.create({
 	date: {
 		fontFamily: "normal",
 		fontSize: 12,
-		color: "gray"
+		color: "gray",
+		flexDirection: "row",
+		gap: 4,
+		alignItems: "center"
 	},
 	articleIcon: {
 		borderRadius: 50,

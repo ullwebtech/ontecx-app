@@ -18,6 +18,7 @@ import { useFonts } from "expo-font"
 import React from "react"
 import { ReduxStore } from "redux/store"
 import AppNavigation from "AppNavigation"
+import PermissionRequestManager from "components/misc/PermissionRequestManager"
 
 export default function App() {
 	const [loaded, error] = useFonts({
@@ -49,8 +50,9 @@ export default function App() {
 	return (
 		<ReduxProvider store={ReduxStore}>
 			<StatusBar animated={true} backgroundColor={"#1280E1"} barStyle={"light-content"} showHideTransition={"slide"} hidden={false} />
-
-			<AppNavigation />
+			<PermissionRequestManager>
+				<AppNavigation />
+			</PermissionRequestManager>
 		</ReduxProvider>
 	)
 }

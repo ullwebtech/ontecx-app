@@ -1,0 +1,32 @@
+{
+	"authors": [],
+	"entities": [
+		{
+			"description": "Russian oligarch, and politician",
+			"full_name": "Roman Abramovich",
+			"image": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Abramovich_Chukotka_%28cropped%29.jpg",
+			"name": "Roman Abramovich",
+			"type": "PER"
+		},
+		{
+			"description": "German association football player",
+			"full_name": "Kai Havertz",
+			"image": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Kai-Havertz-August-2018.jpg",
+			"name": "Kai Havertz",
+			"type": "PER"
+		},
+		{ "latitude": 41.92026901245117, "location_type": "POI", "longitude": -92.39518737792969, "name": "Chelsea", "type": "LOC" },
+		{ "latitude": 42.83332824707031, "location_type": "COUNTRY", "longitude": 12.833330154418945, "name": "Italy", "type": "LOC" },
+		{ "latitude": 44.26464080810547, "location_type": "LANDMARK", "longitude": -96.75834655761719, "name": "Inter", "type": "LOC" },
+		{ "latitude": 50.83332824707031, "location_type": "COUNTRY", "longitude": 4, "name": "Belgium", "type": "LOC" },
+		{ "latitude": 49, "location_type": "COUNTRY", "longitude": 32, "name": "Ukraine", "type": "LOC" },
+		{ "latitude": 49.92900085449219, "location_type": "CITY", "longitude": -6.302999973297119, "name": "Telegraph", "type": "LOC" }
+	],
+	"image": "https://dailypost.ng/wp-content/uploads/2022/01/Lukaku.jpg",
+	"language": "en",
+	"publish_date": "2022-03-12 19:08:36",
+	"sentiment": -0.223,
+	"text": "Chelsea striker, Romelu Lukaku has reportedly been left ‘angered and appalled’ by reports he’s ready to quit the West London club in order to return to Inter Milan. Reports had earlier emerged in Italy claiming that Lukaku is prepared to take a pay cut in order to rejoin Inter Milan in the summer amid the current situation at Chelsea. Recall that Lukaku rejoined Chelsea in the summer of 2021 from Inter for £97.5million. Speculation of the Belgium international wanting outcomes with Chelsea’s future being thrown into turmoil after owner Roman Abramovich was hit by sanctions from the UK government amid his alleged links to Russian President Vladimir Putin, who ordered the invasion of Ukraine last month. However, according to the Telegraph, Lukaku is upset by the reports in Italy over his future and he feels now more than ever everyone at Chelsea should be sticking together. The former Manchester United star has failed to have the impact many hoped for since returning to Chelsea and has not scored in the league this year. The 28-year-old is fighting for a starting spot against the likes of Kai Havertz and Timo Werner and clearly irked Chelsea manager, Thomas Tuchel last December after he was dropped by for giving an interview declaring his plans to one day return to Inter Milan.",
+	"title": "EPL: Lukaku reacts to reports he’ll take pay cut, leave Chelsea",
+	"url": "https://dailypost.ng/2022/03/12/epl-lukaku-reacts-to-reports-hell-take-pay-cut-leave-chelsea/"
+}

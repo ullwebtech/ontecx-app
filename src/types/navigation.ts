@@ -8,7 +8,9 @@ export type RootScreenParamList = {
 	Dashboard?: undefined
 	Home?: undefined
 	StackArticleScreens?: undefined
-	ArticleContent?: undefined
+	ArticleContent?: {
+		slug?: string
+	}
 	ReadNews?: undefined
 }
 

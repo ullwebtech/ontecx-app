@@ -24,7 +24,9 @@ export default function Appheader() {
 			{!showArticleHeader ? (
 				<View style={styles.container}>
 					<View style={styles.titleCont}>
-						<Text style={styles.title}>{apptitle}</Text>
+						<Text style={styles.title} numberOfLines={1}>
+							{apptitle}
+						</Text>
 					</View>
 
 					<View style={styles.iconCont}>

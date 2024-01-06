@@ -1,11 +1,13 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit"
 import { appSlice } from "./reducers/appSlice"
 import { useDispatch } from "react-redux"
+import { newsSlice } from "./reducers/newsSlice"
 
 const makeStore = () =>
 	configureStore({
 		reducer: {
-			[appSlice.name]: appSlice.reducer
+			[appSlice.name]: appSlice.reducer,
+			[newsSlice.name]: newsSlice.reducer
 		},
 		devTools: true
 	})

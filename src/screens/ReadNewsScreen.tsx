@@ -6,6 +6,7 @@ import { setAppTitle } from "redux/reducers/appSlice"
 
 export default function ReadNewsScreen() {
 	const dispatcher = useAppDispatch()
+
 	React.useEffect(() => {
 		dispatcher(setAppTitle({ title: "Read News" }))
 	}, [])
