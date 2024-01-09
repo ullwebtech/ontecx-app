@@ -5,9 +5,9 @@ import { Image } from "expo-image"
 import { useNavigation } from "@react-navigation/native"
 import { useAppDispatch } from "redux/store"
 import { setAppTitle } from "redux/reducers/appSlice"
-import { FetchNewsContentApiHandler, FetchNewsHeadlinesApiHandler, getNewsHeadlines } from "redux/reducers/newsSlice"
 import { useSelector } from "react-redux"
-import { NewsInterface } from "types"
+import { NewsInterface, WordpressPostInterface } from "types"
+import { FetchPostApiHandler, FetchPostsApiHandler, getNewsPost } from "redux/reducers/newsSlice"
 
 type RecommendNewsProps = {
 	showHeader?: boolean
@@ -16,42 +16,46 @@ type RecommendNewsProps = {
 export default function RecommendNews({ showHeader = true, height = 300 }: RecommendNewsProps) {
 	const navigation = useNavigation()
 	const dispatcher = useAppDispatch()
-	const { isLoading, data } = useSelector(getNewsHeadlines)
+	const { isLoading, data } = useSelector(getNewsPost)
 
-	const articles = data?.news ?? []
+	const articles = data ? JSON.parse(data as string) : []
+
 	const showMore = () => navigation?.navigate("ReadNews")
 
 	const gotoArticleContent = (_slug?: string, _title?: string) => {
 		dispatcher(setAppTitle({ articleTitle: _title, articleHeader: true }))
 
-		dispatcher(FetchNewsContentApiHandler({ id: _slug }))
+		dispatcher(FetchPostApiHandler({ id: _slug }))
 		navigation?.navigate("StackArticleScreens")
 	}
-
+	//
 	React.useEffect(() => {
-		dispatcher(FetchNewsHeadlinesApiHandler({ id: "ng" }))
+		dispatcher(FetchPostsApiHandler({ page: 1, perPage: 10 }))
 	}, [])
 
-	const renderItem = ({ item }: { item: NewsInterface }) => {
+	const renderItem = ({ item }: { item: WordpressPostInterface }) => {
 		return (
-			<TouchableOpacity onPress={() => gotoArticleContent(item?.url, item?.language?.toLocaleUpperCase())} activeOpacity={0.5} style={styles.card}>
+			<TouchableOpacity onPress={() => gotoArticleContent(item?.id, "EN")} activeOpacity={0.5} style={styles.card}>
 				{/* image */}
 				<View>
-					<Image source={{ uri: item?.image, width: 250, height: 250 }} style={styles.cardImg} />
+					<Image
+						source={{ uri: item?.yoast_head_json?.og_image[0]?.url, width: item?.yoast_head_json?.og_image[0]?.width, height: item?.yoast_head_json?.og_image[0]?.height }}
+						style={styles.cardImg}
+					/>
 				</View>
 
 				{/* body */}
 				<View style={styles.cardBody}>
 					{/* header */}
 					<View style={styles.cardHeader}>
-						<Text style={styles.cardCategory}>{item?.author}</Text>
+						<Text style={styles.cardCategory}>{item?.yoast_head_json?.schema["@graph"][0]?.articleSection?.join(" ")}</Text>
 						{/* <Text style={styles.cardHeaderSeparator} />
-						<Text style={styles.cardTag}>{item?.tag}</Text> */}
+						<Text style={styles.cardTag}>Tag</Text> */}
 					</View>
 
 					<View>
 						<Text style={styles.cardBodyText} numberOfLines={1}>
-							{item?.title}
+							{item?.title?.rendered}
 						</Text>
 					</View>
 
@@ -60,10 +64,10 @@ export default function RecommendNews({ showHeader = true, height = 300 }: Recom
 						{/* article infor */}
 						<View style={styles.articleInfo}>
 							<Text style={styles.author} numberOfLines={2}>
-								{item?.text}
+								{item?.yoast_head_json?.description}
 							</Text>
 							<Text style={styles.date}>
-								<ClockIcon size={16} color={"gray"} /> {new Date(item?.publish_date)?.toUTCString()}
+								<ClockIcon size={16} color={"gray"} /> {new Date(item?.yoast_head_json?.article_published_time)?.toUTCString()}
 							</Text>
 						</View>
 						<View style={styles.articleIcon}>
@@ -87,12 +91,12 @@ export default function RecommendNews({ showHeader = true, height = 300 }: Recom
 			)}
 
 			{isLoading ? (
-				<ActivityIndicator />
+				<ActivityIndicator size={"large"} />
 			) : (
 				<FlatList
 					ItemSeparatorComponent={() => <View style={styles.separator} />}
 					showsVerticalScrollIndicator={false}
-					data={articles}
+					data={articles as Array<WordpressPostInterface>}
 					renderItem={renderItem}
 					style={{ height: "100%" }}
 					contentContainerStyle={{ paddingBottom: 30 }}

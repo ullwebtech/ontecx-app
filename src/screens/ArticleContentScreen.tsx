@@ -1,56 +1,61 @@
 import { StyleSheet, Text, View, ScrollView, TouchableOpacity, ActivityIndicator } from "react-native"
 import React from "react"
 import { Image } from "expo-image"
-import { ClockIcon, MusicalNoteIcon, PauseIcon, SpeakerWaveIcon } from "react-native-heroicons/outline"
-import { RootStackScreenProps } from "types"
+import { ClockIcon, MusicalNoteIcon, PauseIcon, SpeakerWaveIcon, StopCircleIcon, StopIcon } from "react-native-heroicons/outline"
+import { RootStackScreenProps, WordpressPostInterface } from "types"
 import { useAppDispatch } from "redux/store"
 import { useSelector } from "react-redux"
-import { FetchNewsContentApiHandler, getNewsHeadlines } from "redux/reducers/newsSlice"
 import * as Speech from "expo-speech"
+import { getNewsPost } from "redux/reducers/newsSlice"
+import { extractAudioUrl } from "utilities/utils"
+import { compile } from "html-to-text"
+import AudioPlayer from "components/misc/AudioPlayer"
+
+const htmlToTextoptions = {
+	// ...
+}
+const compiledConvert = compile(htmlToTextoptions) // options passed here
 
 export default function ArticleContentScreen({ route, navigation }: RootStackScreenProps<"ArticleContent">) {
 	const dispatcher = useAppDispatch()
-	const { isLoading, newsContent } = useSelector(getNewsHeadlines)
-	const [readnews, setReadnews] = React.useState<boolean>(false)
+	const { isLoading, newsContent } = useSelector(getNewsPost)
 
-	React.useEffect(() => {
-		if (newsContent && readnews === true) {
-			Speech.speak(newsContent?.text)
-		}
+	const content: WordpressPostInterface | string = newsContent ? JSON.parse(newsContent as string) : null
+	const articleContent = content as WordpressPostInterface
+	const audioLink = extractAudioUrl(articleContent?.content?.rendered)
 
-		if (newsContent && readnews === false) {
-			Speech.stop()
-		}
-
-		return () => {
-			Speech.stop()
-		}
-	}, [readnews])
 	return (
 		<ScrollView showsVerticalScrollIndicator={false} style={styles.container}>
 			{isLoading ? (
 				<ActivityIndicator size={"large"} />
 			) : (
 				<>
-					<Image source={{ uri: newsContent?.image, width: 512, height: 512 }} style={styles.articleImg} contentFit="cover" transition={1000} />
+					<Image
+						source={{
+							uri: articleContent?.yoast_head_json?.og_image[0]?.url,
+							width: articleContent?.yoast_head_json?.og_image[0]?.width,
+							height: articleContent?.yoast_head_json?.og_image[0]?.height
+						}}
+						style={styles.articleImg}
+						contentFit="cover"
+						transition={1000}
+					/>
 					<View style={styles.header}>
-						<Text style={styles.title}>{newsContent && newsContent?.title}</Text>
+						<Text style={styles.title}>{articleContent?.title?.rendered}</Text>
 
 						<View style={styles.articleInfo}>
 							<View style={styles.articleDetails}>
-								{/* <Text style={styles.author}>By {newsContent?.authors?.join(", ")}</Text> */}
+								<Text style={styles.author}>By {articleContent?.yoast_head_json?.author}</Text>
 								<Text style={styles.date}>
-									<ClockIcon size={16} color={"gray"} /> {new Date(newsContent?.publish_date as string)?.toUTCString()}
+									<ClockIcon size={16} color={"gray"} /> {new Date(articleContent?.yoast_head_json?.article_published_time)?.toUTCString()}
 								</Text>
 							</View>
-							<TouchableOpacity activeOpacity={0.5} onPress={() => setReadnews(!readnews)} style={styles.articleIcon}>
-								{readnews === true ? <PauseIcon size={24} color={"rgba(218, 166, 45, 1)"} /> : <SpeakerWaveIcon size={24} color={"rgba(218, 166, 45, 1)"} />}
-							</TouchableOpacity>
+							<AudioPlayer audioFile={audioLink} audioTitle={articleContent?.title?.rendered} trackId={articleContent?.slug} artwork={articleContent?.yoast_head_json?.og_image[0]?.url} />
 						</View>
 					</View>
 
 					<View>
-						<Text style={styles.articleBodyText}>{newsContent && newsContent?.text}</Text>
+						<Text style={styles.articleBodyText}>{compiledConvert(articleContent?.excerpt?.rendered)}</Text>
 					</View>
 				</>
 			)}
@@ -68,11 +73,7 @@ const styles = StyleSheet.create({
 		width: "100%",
 		height: 220
 	},
-	articleIcon: {
-		borderRadius: 50,
-		backgroundColor: "rgba(244, 236, 216, 1)",
-		padding: 8
-	},
+
 	header: {
 		padding: 10
 	},
@@ -83,10 +84,11 @@ const styles = StyleSheet.create({
 	},
 
 	articleInfo: {
-		flexDirection: "row",
+		flexDirection: "column",
 		width: "100%",
 		justifyContent: "space-between",
-		marginBottom: 8
+		marginBottom: 8,
+		rowGap: 10
 	},
 	articleDetails: {
 		flexDirection: "column"

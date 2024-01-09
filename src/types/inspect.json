@@ -1,32 +1,271 @@
 {
-	"authors": [],
-	"entities": [
-		{
-			"description": "Russian oligarch, and politician",
-			"full_name": "Roman Abramovich",
-			"image": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Abramovich_Chukotka_%28cropped%29.jpg",
-			"name": "Roman Abramovich",
-			"type": "PER"
+	"id": 3414,
+	"date": "2022-03-22T10:45:06",
+	"date_gmt": "2022-03-22T10:45:06",
+	"guid": {
+		"rendered": "https://ontecx.com/?p=3414"
+	},
+	"modified": "2022-03-22T10:45:06",
+	"modified_gmt": "2022-03-22T10:45:06",
+	"slug": "bitsika-new-social-feature-payment-plan",
+	"status": "publish",
+	"type": "post",
+	"link": "https://ontecx.com/2022/03/22/bitsika-new-social-feature-payment-plan/",
+	"title": {
+		"rendered": "Bitsika New Social Feature Payment Plan"
+	},
+	"content": {
+		"rendered": "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html><body><p><!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->\n<audio class=\"wp-audio-shortcode\" id=\"audio-3414-1\" preload=\"none\" style=\"width: 100%;\" controls=\"controls\"><source type=\"audio/mpeg\" src=\"https://ontecx.com/wp-content/uploads/2022/03/New-Recording-74.m4a?_=1\" /><a href=\"https://ontecx.com/wp-content/uploads/2022/03/New-Recording-74.m4a\">https://ontecx.com/wp-content/uploads/2022/03/New-Recording-74.m4a</a></audio>\n</p><p><a href=\"https://bitsika.africa/\">Bitsika</a>,&nbsp; A Ghanaian remittance and payment startup launched in 2018 by Atsu Davoh and Samuel Baohen plans to launch a social feature that allows users create social profiles and content on their spending, follow and be followed back, request and receive cash and donations.</p>\n<p>Co-founder, Atsu Davoh said, &nbsp;&ldquo;I&rsquo;d say that this is the fourth big iteration we have had.&rdquo; &lsquo;&lsquo;Everything we&rsquo;ve done since the beginning of the startup has led up to this moment. This social app is an upgrade of the normal fintech basic app: containing wallet features and remittance features, but with social media capabilities.&rdquo;</p>\n<p>The new Bitsika app however allows its users to receive money or donations. This is when someone comes to the page without them having to supply a wallet address or tag.</p>\n<p>Davoh&nbsp; added, &ldquo;I don&rsquo;t know if this social update will make our growth easier or difficult. We anticipate that it will turn out as well.&rdquo;</p>\n<p>Bitsika, has over 95,000 registered users, qualifies as a fully-fledged social media platform. It has more functionality compared to other social payment apps on the continent.</p>\n<p>Davoh in an interview with Techcabal however stated that the new update allows users to request money. They can do that&nbsp; from friends, organize giveaways in-app, and crowdfund for important projects as well as a pizza for a night out.</p>\n<p>Davoh explained that&nbsp; KYC verification is required for users who use the financial services on the app. Users who come on the app to only make or read social posts are not required to do KYC verification.</p>\n<h5>&nbsp;Bitsika&nbsp; is also launching Bitsika&nbsp;<em>Bitsika Console</em>, a merchant dashboard and API for online businesses. They can create invoices that allow Bitsika users to pay them. Through the merchant console, business owners can process payments directly from other Bitsika users. By processing these transactions in-app, Bitsika can take away the friction that online businesses experience with payments.</h5>\n<h3>Bitsika&rsquo;s merchant function is currently live in 8 countries: Ghana, Nigeria, Cameroon, Senegal, Togo, Benin, Ivory Coast, and Burkina Faso. Anyone in these 8 countries and the world can use this social feature.</h3>\n<p>&nbsp;</p>\n<div class=\"pvc_clear\"></div>\n<p id=\"pvc_stats_3414\" class=\"pvc_stats total_only  \" data-element-id=\"3414\" style=\"\"><i class=\"pvc-stats-icon small\" aria-hidden=\"true\"><svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.0\" viewbox=\"0 0 502 315\" preserveaspectratio=\"xMidYMid meet\"><g transform=\"translate(0,332) scale(0.1,-0.1)\" fill=\"\" stroke=\"none\"><path d=\"M2394 3279 l-29 -30 -3 -207 c-2 -182 0 -211 15 -242 39 -76 157 -76 196 0 15 31 17 60 15 243 l-3 209 -33 29 c-26 23 -41 29 -80 29 -41 0 -53 -5 -78 -31z\"></path><path d=\"M3085 3251 c-45 -19 -58 -50 -96 -229 -47 -217 -49 -260 -13 -295 52 -53 146 -42 177 20 16 31 87 366 87 410 0 70 -86 122 -155 94z\"></path><path d=\"M1751 3234 c-13 -9 -29 -31 -37 -50 -12 -29 -10 -49 21 -204 19 -94 39 -189 45 -210 14 -50 54 -80 110 -80 34 0 48 6 76 34 21 21 34 44 34 59 0 14 -18 113 -40 219 -37 178 -43 195 -70 221 -36 32 -101 37 -139 11z\"></path><path d=\"M1163 3073 c-36 -7 -73 -59 -73 -102 0 -56 133 -378 171 -413 34 -32 83 -37 129 -13 70 36 67 87 -16 290 -86 209 -89 214 -129 231 -35 14 -42 15 -82 7z\"></path><path d=\"M3689 3066 c-15 -9 -33 -30 -42 -48 -48 -103 -147 -355 -147 -375 0 -98 131 -148 192 -74 13 15 57 108 97 206 80 196 84 226 37 273 -30 30 -99 39 -137 18z\"></path><path d=\"M583 2784 c-38 -19 -67 -74 -58 -113 9 -42 211 -354 242 -373 16 -10 45 -18 66 -18 51 0 107 52 107 100 0 39 -1 41 -124 234 -80 126 -108 162 -133 173 -41 17 -61 16 -100 -3z\"></path><path d=\"M4250 2784 c-14 -9 -74 -91 -133 -183 -95 -150 -107 -173 -107 -213 0 -55 33 -94 87 -104 67 -13 90 8 211 198 130 202 137 225 78 284 -27 27 -42 34 -72 34 -22 0 -50 -8 -64 -16z\"></path><path d=\"M2275 2693 c-553 -48 -1095 -270 -1585 -649 -135 -104 -459 -423 -483 -476 -23 -49 -22 -139 2 -186 73 -142 361 -457 571 -626 285 -228 642 -407 990 -497 242 -63 336 -73 660 -74 310 0 370 5 595 52 535 111 1045 392 1455 803 122 121 250 273 275 326 19 41 19 137 0 174 -41 79 -309 363 -465 492 -447 370 -946 591 -1479 653 -113 14 -422 18 -536 8z m395 -428 c171 -34 330 -124 456 -258 112 -119 167 -219 211 -378 27 -96 24 -300 -5 -401 -72 -255 -236 -447 -474 -557 -132 -62 -201 -76 -368 -76 -167 0 -236 14 -368 76 -213 98 -373 271 -451 485 -162 444 86 934 547 1084 153 49 292 57 452 25z m909 -232 c222 -123 408 -262 593 -441 76 -74 138 -139 138 -144 0 -16 -233 -242 -330 -319 -155 -123 -309 -223 -461 -299 l-81 -41 32 46 c18 26 49 83 70 128 143 306 141 649 -6 957 -25 52 -61 116 -79 142 l-34 47 45 -20 c26 -10 76 -36 113 -56z m-2057 25 c-40 -58 -105 -190 -130 -263 -110 -324 -59 -707 132 -981 25 -35 42 -64 37 -64 -19 0 -241 119 -326 174 -188 122 -406 314 -532 468 l-58 71 108 103 c185 178 428 349 672 473 66 33 121 60 123 61 2 0 -10 -19 -26 -42z\"></path><path d=\"M2375 1950 c-198 -44 -350 -190 -395 -379 -18 -76 -8 -221 19 -290 114 -284 457 -406 731 -260 98 52 188 154 231 260 27 69 37 214 19 290 -38 163 -166 304 -326 360 -67 23 -215 33 -279 19z\"></path></g></svg></i> <img decoding=\"async\" src=\"https://ontecx.com/wp-content/plugins/page-views-count/ajax-loader.gif\" border=\"0\"></p>\n<div class=\"pvc_clear\"></div>\n</body></html>\n",
+		"protected": false
+	},
+	"excerpt": {
+		"rendered": "<p>Bitsika,&nbsp; A Ghanaian remittance and payment startup launched in 2018 by Atsu Davoh and Samuel Baohen plans to launch a social feature that allows users create social profiles and content on their spending, follow and be followed back, request and receive cash and donations. Co-founder, Atsu Davoh said, &nbsp;&ldquo;I&rsquo;d say that this is the fourth</p>\n<div class=\"pvc_clear\"></div>\n<p id=\"pvc_stats_3414\" class=\"pvc_stats total_only  \" data-element-id=\"3414\" style=\"\"><i class=\"pvc-stats-icon small\" aria-hidden=\"true\"><svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.0\" viewBox=\"0 0 502 315\" preserveAspectRatio=\"xMidYMid meet\"><g transform=\"translate(0,332) scale(0.1,-0.1)\" fill=\"\" stroke=\"none\"><path d=\"M2394 3279 l-29 -30 -3 -207 c-2 -182 0 -211 15 -242 39 -76 157 -76 196 0 15 31 17 60 15 243 l-3 209 -33 29 c-26 23 -41 29 -80 29 -41 0 -53 -5 -78 -31z\"/><path d=\"M3085 3251 c-45 -19 -58 -50 -96 -229 -47 -217 -49 -260 -13 -295 52 -53 146 -42 177 20 16 31 87 366 87 410 0 70 -86 122 -155 94z\"/><path d=\"M1751 3234 c-13 -9 -29 -31 -37 -50 -12 -29 -10 -49 21 -204 19 -94 39 -189 45 -210 14 -50 54 -80 110 -80 34 0 48 6 76 34 21 21 34 44 34 59 0 14 -18 113 -40 219 -37 178 -43 195 -70 221 -36 32 -101 37 -139 11z\"/><path d=\"M1163 3073 c-36 -7 -73 -59 -73 -102 0 -56 133 -378 171 -413 34 -32 83 -37 129 -13 70 36 67 87 -16 290 -86 209 -89 214 -129 231 -35 14 -42 15 -82 7z\"/><path d=\"M3689 3066 c-15 -9 -33 -30 -42 -48 -48 -103 -147 -355 -147 -375 0 -98 131 -148 192 -74 13 15 57 108 97 206 80 196 84 226 37 273 -30 30 -99 39 -137 18z\"/><path d=\"M583 2784 c-38 -19 -67 -74 -58 -113 9 -42 211 -354 242 -373 16 -10 45 -18 66 -18 51 0 107 52 107 100 0 39 -1 41 -124 234 -80 126 -108 162 -133 173 -41 17 -61 16 -100 -3z\"/><path d=\"M4250 2784 c-14 -9 -74 -91 -133 -183 -95 -150 -107 -173 -107 -213 0 -55 33 -94 87 -104 67 -13 90 8 211 198 130 202 137 225 78 284 -27 27 -42 34 -72 34 -22 0 -50 -8 -64 -16z\"/><path d=\"M2275 2693 c-553 -48 -1095 -270 -1585 -649 -135 -104 -459 -423 -483 -476 -23 -49 -22 -139 2 -186 73 -142 361 -457 571 -626 285 -228 642 -407 990 -497 242 -63 336 -73 660 -74 310 0 370 5 595 52 535 111 1045 392 1455 803 122 121 250 273 275 326 19 41 19 137 0 174 -41 79 -309 363 -465 492 -447 370 -946 591 -1479 653 -113 14 -422 18 -536 8z m395 -428 c171 -34 330 -124 456 -258 112 -119 167 -219 211 -378 27 -96 24 -300 -5 -401 -72 -255 -236 -447 -474 -557 -132 -62 -201 -76 -368 -76 -167 0 -236 14 -368 76 -213 98 -373 271 -451 485 -162 444 86 934 547 1084 153 49 292 57 452 25z m909 -232 c222 -123 408 -262 593 -441 76 -74 138 -139 138 -144 0 -16 -233 -242 -330 -319 -155 -123 -309 -223 -461 -299 l-81 -41 32 46 c18 26 49 83 70 128 143 306 141 649 -6 957 -25 52 -61 116 -79 142 l-34 47 45 -20 c26 -10 76 -36 113 -56z m-2057 25 c-40 -58 -105 -190 -130 -263 -110 -324 -59 -707 132 -981 25 -35 42 -64 37 -64 -19 0 -241 119 -326 174 -188 122 -406 314 -532 468 l-58 71 108 103 c185 178 428 349 672 473 66 33 121 60 123 61 2 0 -10 -19 -26 -42z\"/><path d=\"M2375 1950 c-198 -44 -350 -190 -395 -379 -18 -76 -8 -221 19 -290 114 -284 457 -406 731 -260 98 52 188 154 231 260 27 69 37 214 19 290 -38 163 -166 304 -326 360 -67 23 -215 33 -279 19z\"/></g></svg></i> <img decoding=\"async\" src=\"https://ontecx.com/wp-content/plugins/page-views-count/ajax-loader.gif\" border=0 /></p>\n<div class=\"pvc_clear\"></div>\n",
+		"protected": false
+	},
+	"author": 4,
+	"featured_media": 3415,
+	"comment_status": "open",
+	"ping_status": "open",
+	"sticky": false,
+	"template": "",
+	"format": "audio",
+	"meta": {
+		"footnotes": ""
+	},
+	"categories": [37],
+	"tags": [],
+	"yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v21.7 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Bitsika New Social Feature Payment Plan - Ontecx</title>\n<meta name=\"description\" content=\"Bitsika,  A Ghanaian remittance and payment startup launched in 2018 by Atsu Davoh and Samuel Baohen plans to launch a social feature that\" />\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://ontecx.com/2022/03/22/bitsika-new-social-feature-payment-plan/\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Bitsika New Social Feature Payment Plan - Ontecx\" />\n<meta property=\"og:description\" content=\"Bitsika,  A Ghanaian remittance and payment startup launched in 2018 by Atsu Davoh and Samuel Baohen plans to launch a social feature that\" />\n<meta property=\"og:url\" content=\"https://ontecx.com/2022/03/22/bitsika-new-social-feature-payment-plan/\" />\n<meta property=\"og:site_name\" content=\"Ontecx\" />\n<meta property=\"article:published_time\" content=\"2022-03-22T10:45:06+00:00\" />\n<meta property=\"og:image\" content=\"https://ontecx.com/wp-content/uploads/2022/03/bitsika.jpg\" />\n\t<meta property=\"og:image:width\" content=\"1280\" />\n\t<meta property=\"og:image:height\" content=\"669\" />\n\t<meta property=\"og:image:type\" content=\"image/jpeg\" />\n<meta name=\"author\" content=\"Barnabas Blessing(Arabella)\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<meta name=\"twitter:label1\" content=\"Written by\" />\n\t<meta name=\"twitter:data1\" content=\"Barnabas Blessing(Arabella)\" />\n\t<meta name=\"twitter:label2\" content=\"Est. reading time\" />\n\t<meta name=\"twitter:data2\" content=\"2 minutes\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https://ontecx.com/2022/03/22/bitsika-new-social-feature-payment-plan/#article\",\"isPartOf\":{\"@id\":\"https://ontecx.com/2022/03/22/bitsika-new-social-feature-payment-plan/\"},\"author\":{\"name\":\"Barnabas Blessing(Arabella)\",\"@id\":\"https://ontecx.com/#/schema/person/3da2c7d72efae26b6bea519b8ab8f7f6\"},\"headline\":\"Bitsika New Social Feature Payment Plan\",\"datePublished\":\"2022-03-22T10:45:06+00:00\",\"dateModified\":\"2022-03-22T10:45:06+00:00\",\"mainEntityOfPage\":{\"@id\":\"https://ontecx.com/2022/03/22/bitsika-new-social-feature-payment-plan/\"},\"wordCount\":366,\"commentCount\":0,\"publisher\":{\"@id\":\"https://ontecx.com/#organization\"},\"articleSection\":[\"Latest Stories\"],\"inLanguage\":\"en-US\",\"potentialAction\":[{\"@type\":\"CommentAction\",\"name\":\"Comment\",\"target\":[\"https://ontecx.com/2022/03/22/bitsika-new-social-feature-payment-plan/#respond\"]}]},{\"@type\":\"WebPage\",\"@id\":\"https://ontecx.com/2022/03/22/bitsika-new-social-feature-payment-plan/\",\"url\":\"https://ontecx.com/2022/03/22/bitsika-new-social-feature-payment-plan/\",\"name\":\"Bitsika New Social Feature Payment Plan - Ontecx\",\"isPartOf\":{\"@id\":\"https://ontecx.com/#website\"},\"datePublished\":\"2022-03-22T10:45:06+00:00\",\"dateModified\":\"2022-03-22T10:45:06+00:00\",\"description\":\"Bitsika,  A Ghanaian remittance and payment startup launched in 2018 by Atsu Davoh and Samuel Baohen plans to launch a social feature that\",\"breadcrumb\":{\"@id\":\"https://ontecx.com/2022/03/22/bitsika-new-social-feature-payment-plan/#breadcrumb\"},\"inLanguage\":\"en-US\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https://ontecx.com/2022/03/22/bitsika-new-social-feature-payment-plan/\"]}]},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://ontecx.com/2022/03/22/bitsika-new-social-feature-payment-plan/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://ontecx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Bitsika New Social Feature Payment Plan\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://ontecx.com/#website\",\"url\":\"https://ontecx.com/\",\"name\":\"Ontecx\",\"description\":\"Tech Blog\",\"publisher\":{\"@id\":\"https://ontecx.com/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://ontecx.com/?s={search_term_string}\"},\"query-input\":\"required name=search_term_string\"}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https://ontecx.com/#organization\",\"name\":\"Ontecx news\",\"url\":\"https://ontecx.com/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://ontecx.com/#/schema/logo/image/\",\"url\":\"https://ontecx.com/wp-content/uploads/2021/07/ontecx-logo.png\",\"contentUrl\":\"https://ontecx.com/wp-content/uploads/2021/07/ontecx-logo.png\",\"width\":1080,\"height\":1080,\"caption\":\"Ontecx news\"},\"image\":{\"@id\":\"https://ontecx.com/#/schema/logo/image/\"}},{\"@type\":\"Person\",\"@id\":\"https://ontecx.com/#/schema/person/3da2c7d72efae26b6bea519b8ab8f7f6\",\"name\":\"Barnabas Blessing(Arabella)\",\"image\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://ontecx.com/#/schema/person/image/\",\"url\":\"https://secure.gravatar.com/avatar/e6d111027af12a8f70fa85c310517add?s=96&d=mm&r=g\",\"contentUrl\":\"https://secure.gravatar.com/avatar/e6d111027af12a8f70fa85c310517add?s=96&d=mm&r=g\",\"caption\":\"Barnabas Blessing(Arabella)\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+	"yoast_head_json": {
+		"title": "Bitsika New Social Feature Payment Plan - Ontecx",
+		"description": "Bitsika,  A Ghanaian remittance and payment startup launched in 2018 by Atsu Davoh and Samuel Baohen plans to launch a social feature that",
+		"robots": {
+			"index": "index",
+			"follow": "follow",
+			"max-snippet": "max-snippet:-1",
+			"max-image-preview": "max-image-preview:large",
+			"max-video-preview": "max-video-preview:-1"
 		},
-		{
-			"description": "German association football player",
-			"full_name": "Kai Havertz",
-			"image": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Kai-Havertz-August-2018.jpg",
-			"name": "Kai Havertz",
-			"type": "PER"
+		"canonical": "https://ontecx.com/2022/03/22/bitsika-new-social-feature-payment-plan/",
+		"og_locale": "en_US",
+		"og_type": "article",
+		"og_title": "Bitsika New Social Feature Payment Plan - Ontecx",
+		"og_description": "Bitsika,  A Ghanaian remittance and payment startup launched in 2018 by Atsu Davoh and Samuel Baohen plans to launch a social feature that",
+		"og_url": "https://ontecx.com/2022/03/22/bitsika-new-social-feature-payment-plan/",
+		"og_site_name": "Ontecx",
+		"article_published_time": "2022-03-22T10:45:06+00:00",
+		"og_image": [
+			{
+				"width": 1280,
+				"height": 669,
+				"url": "https://ontecx.com/wp-content/uploads/2022/03/bitsika.jpg",
+				"type": "image/jpeg"
+			}
+		],
+		"author": "Barnabas Blessing(Arabella)",
+		"twitter_card": "summary_large_image",
+		"twitter_misc": {
+			"Written by": "Barnabas Blessing(Arabella)",
+			"Est. reading time": "2 minutes"
 		},
-		{ "latitude": 41.92026901245117, "location_type": "POI", "longitude": -92.39518737792969, "name": "Chelsea", "type": "LOC" },
-		{ "latitude": 42.83332824707031, "location_type": "COUNTRY", "longitude": 12.833330154418945, "name": "Italy", "type": "LOC" },
-		{ "latitude": 44.26464080810547, "location_type": "LANDMARK", "longitude": -96.75834655761719, "name": "Inter", "type": "LOC" },
-		{ "latitude": 50.83332824707031, "location_type": "COUNTRY", "longitude": 4, "name": "Belgium", "type": "LOC" },
-		{ "latitude": 49, "location_type": "COUNTRY", "longitude": 32, "name": "Ukraine", "type": "LOC" },
-		{ "latitude": 49.92900085449219, "location_type": "CITY", "longitude": -6.302999973297119, "name": "Telegraph", "type": "LOC" }
-	],
-	"image": "https://dailypost.ng/wp-content/uploads/2022/01/Lukaku.jpg",
-	"language": "en",
-	"publish_date": "2022-03-12 19:08:36",
-	"sentiment": -0.223,
-	"text": "Chelsea striker, Romelu Lukaku has reportedly been left ‘angered and appalled’ by reports he’s ready to quit the West London club in order to return to Inter Milan. Reports had earlier emerged in Italy claiming that Lukaku is prepared to take a pay cut in order to rejoin Inter Milan in the summer amid the current situation at Chelsea. Recall that Lukaku rejoined Chelsea in the summer of 2021 from Inter for £97.5million. Speculation of the Belgium international wanting outcomes with Chelsea’s future being thrown into turmoil after owner Roman Abramovich was hit by sanctions from the UK government amid his alleged links to Russian President Vladimir Putin, who ordered the invasion of Ukraine last month. However, according to the Telegraph, Lukaku is upset by the reports in Italy over his future and he feels now more than ever everyone at Chelsea should be sticking together. The former Manchester United star has failed to have the impact many hoped for since returning to Chelsea and has not scored in the league this year. The 28-year-old is fighting for a starting spot against the likes of Kai Havertz and Timo Werner and clearly irked Chelsea manager, Thomas Tuchel last December after he was dropped by for giving an interview declaring his plans to one day return to Inter Milan.",
-	"title": "EPL: Lukaku reacts to reports he’ll take pay cut, leave Chelsea",
-	"url": "https://dailypost.ng/2022/03/12/epl-lukaku-reacts-to-reports-hell-take-pay-cut-leave-chelsea/"
+		"schema": {
+			"@context": "https://schema.org",
+			"@graph": [
+				{
+					"@type": "Article",
+					"@id": "https://ontecx.com/2022/03/22/bitsika-new-social-feature-payment-plan/#article",
+					"isPartOf": {
+						"@id": "https://ontecx.com/2022/03/22/bitsika-new-social-feature-payment-plan/"
+					},
+					"author": {
+						"name": "Barnabas Blessing(Arabella)",
+						"@id": "https://ontecx.com/#/schema/person/3da2c7d72efae26b6bea519b8ab8f7f6"
+					},
+					"headline": "Bitsika New Social Feature Payment Plan",
+					"datePublished": "2022-03-22T10:45:06+00:00",
+					"dateModified": "2022-03-22T10:45:06+00:00",
+					"mainEntityOfPage": {
+						"@id": "https://ontecx.com/2022/03/22/bitsika-new-social-feature-payment-plan/"
+					},
+					"wordCount": 366,
+					"commentCount": 0,
+					"publisher": {
+						"@id": "https://ontecx.com/#organization"
+					},
+					"articleSection": ["Latest Stories"],
+					"inLanguage": "en-US",
+					"potentialAction": [
+						{
+							"@type": "CommentAction",
+							"name": "Comment",
+							"target": ["https://ontecx.com/2022/03/22/bitsika-new-social-feature-payment-plan/#respond"]
+						}
+					]
+				},
+				{
+					"@type": "WebPage",
+					"@id": "https://ontecx.com/2022/03/22/bitsika-new-social-feature-payment-plan/",
+					"url": "https://ontecx.com/2022/03/22/bitsika-new-social-feature-payment-plan/",
+					"name": "Bitsika New Social Feature Payment Plan - Ontecx",
+					"isPartOf": {
+						"@id": "https://ontecx.com/#website"
+					},
+					"datePublished": "2022-03-22T10:45:06+00:00",
+					"dateModified": "2022-03-22T10:45:06+00:00",
+					"description": "Bitsika,  A Ghanaian remittance and payment startup launched in 2018 by Atsu Davoh and Samuel Baohen plans to launch a social feature that",
+					"breadcrumb": {
+						"@id": "https://ontecx.com/2022/03/22/bitsika-new-social-feature-payment-plan/#breadcrumb"
+					},
+					"inLanguage": "en-US",
+					"potentialAction": [
+						{
+							"@type": "ReadAction",
+							"target": ["https://ontecx.com/2022/03/22/bitsika-new-social-feature-payment-plan/"]
+						}
+					]
+				},
+				{
+					"@type": "BreadcrumbList",
+					"@id": "https://ontecx.com/2022/03/22/bitsika-new-social-feature-payment-plan/#breadcrumb",
+					"itemListElement": [
+						{
+							"@type": "ListItem",
+							"position": 1,
+							"name": "Home",
+							"item": "https://ontecx.com/"
+						},
+						{
+							"@type": "ListItem",
+							"position": 2,
+							"name": "Bitsika New Social Feature Payment Plan"
+						}
+					]
+				},
+				{
+					"@type": "WebSite",
+					"@id": "https://ontecx.com/#website",
+					"url": "https://ontecx.com/",
+					"name": "Ontecx",
+					"description": "Tech Blog",
+					"publisher": {
+						"@id": "https://ontecx.com/#organization"
+					},
+					"potentialAction": [
+						{
+							"@type": "SearchAction",
+							"target": {
+								"@type": "EntryPoint",
+								"urlTemplate": "https://ontecx.com/?s={search_term_string}"
+							},
+							"query-input": "required name=search_term_string"
+						}
+					],
+					"inLanguage": "en-US"
+				},
+				{
+					"@type": "Organization",
+					"@id": "https://ontecx.com/#organization",
+					"name": "Ontecx news",
+					"url": "https://ontecx.com/",
+					"logo": {
+						"@type": "ImageObject",
+						"inLanguage": "en-US",
+						"@id": "https://ontecx.com/#/schema/logo/image/",
+						"url": "https://ontecx.com/wp-content/uploads/2021/07/ontecx-logo.png",
+						"contentUrl": "https://ontecx.com/wp-content/uploads/2021/07/ontecx-logo.png",
+						"width": 1080,
+						"height": 1080,
+						"caption": "Ontecx news"
+					},
+					"image": {
+						"@id": "https://ontecx.com/#/schema/logo/image/"
+					}
+				},
+				{
+					"@type": "Person",
+					"@id": "https://ontecx.com/#/schema/person/3da2c7d72efae26b6bea519b8ab8f7f6",
+					"name": "Barnabas Blessing(Arabella)",
+					"image": {
+						"@type": "ImageObject",
+						"inLanguage": "en-US",
+						"@id": "https://ontecx.com/#/schema/person/image/",
+						"url": "https://secure.gravatar.com/avatar/e6d111027af12a8f70fa85c310517add?s=96&d=mm&r=g",
+						"contentUrl": "https://secure.gravatar.com/avatar/e6d111027af12a8f70fa85c310517add?s=96&d=mm&r=g",
+						"caption": "Barnabas Blessing(Arabella)"
+					}
+				}
+			]
+		}
+	},
+	"amp_enabled": true,
+	"_links": {
+		"self": [
+			{
+				"href": "https://ontecx.com/wp-json/wp/v2/posts/3414"
+			}
+		],
+		"collection": [
+			{
+				"href": "https://ontecx.com/wp-json/wp/v2/posts"
+			}
+		],
+		"about": [
+			{
+				"href": "https://ontecx.com/wp-json/wp/v2/types/post"
+			}
+		],
+		"author": [
+			{
+				"embeddable": true,
+				"href": "https://ontecx.com/wp-json/wp/v2/users/4"
+			}
+		],
+		"replies": [
+			{
+				"embeddable": true,
+				"href": "https://ontecx.com/wp-json/wp/v2/comments?post=3414"
+			}
+		],
+		"version-history": [
+			{
+				"count": 1,
+				"href": "https://ontecx.com/wp-json/wp/v2/posts/3414/revisions"
+			}
+		],
+		"predecessor-version": [
+			{
+				"id": 3417,
+				"href": "https://ontecx.com/wp-json/wp/v2/posts/3414/revisions/3417"
+			}
+		],
+		"wp:featuredmedia": [
+			{
+				"embeddable": true,
+				"href": "https://ontecx.com/wp-json/wp/v2/media/3415"
+			}
+		],
+		"wp:attachment": [
+			{
+				"href": "https://ontecx.com/wp-json/wp/v2/media?parent=3414"
+			}
+		],
+		"wp:term": [
+			{
+				"taxonomy": "category",
+				"embeddable": true,
+				"href": "https://ontecx.com/wp-json/wp/v2/categories?post=3414"
+			},
+			{
+				"taxonomy": "post_tag",
+				"embeddable": true,
+				"href": "https://ontecx.com/wp-json/wp/v2/tags?post=3414"
+			}
+		],
+		"curies": [
+			{
+				"name": "wp",
+				"href": "https://api.w.org/{rel}",
+				"templated": true
+			}
+		]
+	}
 }

@@ -6,15 +6,15 @@ interface ConfigsProps {
 
 export const apiConfigs: ConfigsProps = {
 	env: "live", // 'test' |   'live'
-	apiKey: "6a20ba4b3ae54c5e9ac269efaba4d8d2",
+	apiKey: "admin@ontecx.com:tpmZ kqCK 8IuY wMjP Mcss 9PhK",
 	getBaseUrl: () => {
 		switch (apiConfigs.env) {
 			case "test":
-				return "https://api.worldnewsapi.com"
+				return "https://ontecx.com"
 			case "live":
-				return "https://api.worldnewsapi.com"
+				return "https://ontecx.com"
 			default:
-				return "https://api.worldnewsapi.com"
+				return "https://ontecx.com"
 		}
 	}
 }

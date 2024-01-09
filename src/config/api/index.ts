@@ -1,7 +1,10 @@
 import axios from "axios"
 import { apiConfigs } from "config/config"
+import { encode } from "base-64"
 
 const baseUrl = apiConfigs?.getBaseUrl()
+const apiKey = apiConfigs?.apiKey
+const apiKeyEndcode = encode(apiKey as string)
 
 const HttpClient = axios.create({
 	responseType: "json"
@@ -13,8 +16,21 @@ HttpClient.interceptors.request.use(
 		/* Configure the api resource base url. */
 
 		configs.baseURL = baseUrl
-		if (typeof configs?.headers != "undefined") {
-			configs.headers["x-api-key"] = `${apiConfigs.apiKey}`
+
+		const url = configs?.url?.split(":")
+		if (url) {
+			/* only add authorization header when access level for that 
+		resource is protected */
+			const isProtected = url[0]
+			const path = url[1]
+
+			if (isProtected === "protected") {
+				if (typeof configs?.headers != "undefined") {
+					configs.headers.Authorization = `Basic ${apiKeyEndcode}`
+				}
+			}
+
+			if (path) configs.url = path
 		}
 
 		/* Return the configurations to Axios */

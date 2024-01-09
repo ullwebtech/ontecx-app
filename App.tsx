@@ -19,8 +19,11 @@ import React from "react"
 import { ReduxStore } from "redux/store"
 import AppNavigation from "AppNavigation"
 import PermissionRequestManager from "components/misc/PermissionRequestManager"
+import TrackPlayer from "react-native-track-player"
 
 export default function App() {
+	const [initAudioPlayer, setAudioPlayer] = React.useState<boolean>(false)
+
 	const [loaded, error] = useFonts({
 		thin: Montserrat_100Thin,
 		light: Montserrat_300Light,
@@ -41,6 +44,14 @@ export default function App() {
 		if (loaded) {
 			SplashScreen.hideAsync()
 		}
+
+		const setupAudio = async () => {
+			if (!initAudioPlayer) {
+				await TrackPlayer.setupPlayer()
+			}
+			setAudioPlayer(true)
+		}
+		setupAudio()
 	}, [loaded])
 
 	if (!loaded) {

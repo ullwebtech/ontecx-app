@@ -1,98 +1,71 @@
-import { StyleSheet, Text, View, ImageBackground } from "react-native"
+import { StyleSheet, Text, View, ImageBackground, ActivityIndicator, TouchableOpacity } from "react-native"
 import React from "react"
 import { ScrollView } from "react-native-gesture-handler"
 import { ClockIcon, MusicalNoteIcon } from "react-native-heroicons/outline"
+import { useSelector } from "react-redux"
+import { FetchPostApiHandler, getNewsPost } from "redux/reducers/newsSlice"
+import { useAppDispatch } from "redux/store"
+import { setAppTitle } from "redux/reducers/appSlice"
+import { useNavigation } from "@react-navigation/native"
+import { WordpressPostInterface } from "types"
+import { PickNewsFeed } from "utilities/utils"
 
-const slideContent = [
-	{
-		slug: 1,
-		tag: "Latest Stories",
-		title: "Google Africa First Internet Cable To Arrive Togo",
-		author: "Barnabas Blessing (Arabella)",
-		timing: {
-			date: "Feb 27, 2023",
-			time: "2 mins read"
-		},
-		img: require("assets/images/slide-1.png")
-	},
-
-	{
-		slug: 2,
-		tag: "Latest Stories",
-		title: "TechonomyAfrica Partners With AFOMA To Power Blockchain Education Growth",
-		author: "Barnabas Blessing (Arabella)",
-		timing: {
-			date: "Feb 27, 2023",
-			time: "2 mins read"
-		},
-
-		img: require("assets/images/slide-2.png")
-	},
-	{
-		slug: 3,
-		tag: "Latest Stories",
-		title: "Bitsika New Social Feature Payment Plan",
-		author: "Barnabas Blessing (Arabella)",
-		timing: {
-			date: "Feb 27, 2023",
-			time: "2 mins read"
-		},
-		img: require("assets/images/slide-3.png")
-	},
-
-	{
-		slug: 4,
-		tag: "Latest Stories",
-		title: "Lendsqr, The Lending Solution In Africa",
-		author: "Barnabas Blessing (Arabella)",
-		timing: {
-			date: "Feb 27, 2023",
-			time: "2 mins read"
-		},
-		img: require("assets/images/slide-4.png")
-	},
-	{
-		slug: 5,
-		tag: "Latest Stories",
-		title: "Five Technology Trends For 2022",
-		author: "Barnabas Blessing (Arabella)",
-		timing: {
-			date: "Feb 27, 2023",
-			time: "2 mins read"
-		},
-		img: require("assets/images/slide-5.png")
-	}
-]
 export default function HomeCardSliders() {
+	const { isLoading, data } = useSelector(getNewsPost)
+	const dispatcher = useAppDispatch()
+	const navigation = useNavigation()
+
+	const _data: WordpressPostInterface[] = data ? PickNewsFeed(JSON.parse(data as string), 5) : []
+	const articles = _data
+
+	const gotoArticleContent = (_slug?: string, _title?: string) => {
+		dispatcher(setAppTitle({ articleTitle: _title, articleHeader: true }))
+
+		dispatcher(FetchPostApiHandler({ id: _slug }))
+		navigation?.navigate("StackArticleScreens")
+	}
+
 	return (
 		<View style={styles.container}>
-			<ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-				{slideContent.map((item, index) => (
-					<ImageBackground key={item?.slug} source={item?.img} resizeMode="cover" style={styles.imageContainer} borderRadius={20}>
-						<View style={styles.cardBody}>
-							<View style={styles.cateCont}>
-								<Text style={styles.categoryTag}>{item?.tag}</Text>
-							</View>
-							<View>
-								<Text style={styles.title} numberOfLines={2}>
-									{item?.title}
-								</Text>
-							</View>
-							<View style={styles.footer}>
-								<View style={styles.infoCont}>
-									<Text style={styles.author}>{item?.author}</Text>
-									<Text style={styles.articleInfo}>
-										{item?.timing.date} <ClockIcon size={15} color={"rgba(255, 255, 255, 1)"} /> {item?.timing.time}
-									</Text>
+			{isLoading ? (
+				<ActivityIndicator size={"large"} />
+			) : (
+				<ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+					{articles.map((item, index) => (
+						<TouchableOpacity key={item?.slug} activeOpacity={0.5} onPress={() => gotoArticleContent(item?.id, "EN")}>
+							<ImageBackground
+								source={{ uri: item?.yoast_head_json?.og_image[0]?.url, width: item?.yoast_head_json?.og_image[0]?.width, height: item?.yoast_head_json?.og_image[0]?.height }}
+								resizeMode="cover"
+								style={styles.imageContainer}
+								borderRadius={20}
+							>
+								<View style={styles.cardBody}>
+									<View style={styles.cateCont}>
+										<Text style={styles.categoryTag}>{item?.yoast_head_json?.schema["@graph"][0]?.articleSection?.join(" ")}</Text>
+									</View>
+									<View>
+										<Text style={styles.title} numberOfLines={2}>
+											{item?.title?.rendered}
+										</Text>
+									</View>
+									<View style={styles.footer}>
+										<View style={styles.infoCont}>
+											<Text style={styles.author}>{item?.yoast_head_json.author}</Text>
+											<Text style={styles.articleInfo}>
+												{new Date(item?.yoast_head_json?.article_published_time)?.toDateString()} <ClockIcon size={15} color={"rgba(255, 255, 255, 1)"} />{" "}
+												{new Date(item?.yoast_head_json?.article_published_time)?.toTimeString()}
+											</Text>
+										</View>
+										<View style={styles.iconCont}>
+											<MusicalNoteIcon size={20} color={"rgba(255, 255, 255, 1)"} />
+										</View>
+									</View>
 								</View>
-								<View style={styles.iconCont}>
-									<MusicalNoteIcon size={20} color={"rgba(255, 255, 255, 1)"} />
-								</View>
-							</View>
-						</View>
-					</ImageBackground>
-				))}
-			</ScrollView>
+							</ImageBackground>
+						</TouchableOpacity>
+					))}
+				</ScrollView>
+			)}
 		</View>
 	)
 }
@@ -142,7 +115,7 @@ const styles = StyleSheet.create({
 		color: "#eeeeee"
 	},
 	articleInfo: {
-		fontSize: 12,
+		fontSize: 9,
 		fontFamily: "normal",
 		color: "#eeeeee"
 	},
