@@ -1,8 +1,8 @@
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native"
+import { ActivityIndicator, StyleSheet, Text, TouchableOpacity, View } from "react-native"
 import React from "react"
 import { PauseIcon, SpeakerWaveIcon, StopCircleIcon } from "react-native-heroicons/outline"
 
-import TrackPlayer from "react-native-track-player"
+import TrackPlayer, { useIsPlaying, useProgress } from "react-native-track-player"
 
 type AudioPlayerProps = {
 	audioFile?: string | null
@@ -13,6 +13,8 @@ type AudioPlayerProps = {
 export default function AudioPlayer({ audioFile, audioTitle, trackId, artwork }: AudioPlayerProps) {
 	const [readnews, setReadnews] = React.useState<boolean>(false)
 	const [startAudio, setStartAudio] = React.useState<boolean>(false)
+	const isPlaying = useIsPlaying()
+	const { position, buffered, duration } = useProgress()
 
 	// Handle audio
 	const playAudio = async () => {
@@ -55,6 +57,7 @@ export default function AudioPlayer({ audioFile, audioTitle, trackId, artwork }:
 
 	return (
 		<View style={styles.articleIcon}>
+			{/* Start, pause controls */}
 			<View>
 				{readnews && (
 					<TouchableOpacity activeOpacity={0.5} onPress={pauseAudio}>
@@ -67,13 +70,18 @@ export default function AudioPlayer({ audioFile, audioTitle, trackId, artwork }:
 					</TouchableOpacity>
 				)}
 			</View>
-			{startAudio && (
-				<View>
+			{}
+			{/* Duration indicator */}
+			<View>{readnews && <>{isPlaying.bufferingDuringPlay ? <ActivityIndicator size={"small"} /> : <Text>{`${position}:${duration}`}</Text>}</>}</View>
+
+			{/* Stop controls */}
+			<View>
+				{startAudio && (
 					<TouchableOpacity activeOpacity={0.5} onPress={stopAudio}>
 						<StopCircleIcon size={25} color={"rgba(218, 166, 45, 1)"} />
 					</TouchableOpacity>
-				</View>
-			)}
+				)}
+			</View>
 		</View>
 	)
 }

@@ -8,11 +8,22 @@ import { useSelector } from "react-redux"
 import * as Speech from "expo-speech"
 import { getNewsPost } from "redux/reducers/newsSlice"
 import { extractAudioUrl } from "utilities/utils"
-import { compile } from "html-to-text"
+import { HtmlToTextOptions, compile } from "html-to-text"
 import AudioPlayer from "components/misc/AudioPlayer"
 
-const htmlToTextoptions = {
+const htmlToTextoptions: HtmlToTextOptions = {
 	// ...
+	wordwrap: null,
+	selectors: [
+		{
+			selector: "a",
+			format: "skip"
+		},
+		{
+			selector: "img",
+			format: "skip"
+		}
+	]
 }
 const compiledConvert = compile(htmlToTextoptions) // options passed here
 
@@ -55,7 +66,7 @@ export default function ArticleContentScreen({ route, navigation }: RootStackScr
 					</View>
 
 					<View>
-						<Text style={styles.articleBodyText}>{compiledConvert(articleContent?.excerpt?.rendered)}</Text>
+						<Text style={styles.articleBodyText}>{compiledConvert(articleContent?.content?.rendered)}</Text>
 					</View>
 				</>
 			)}
